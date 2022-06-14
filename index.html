@@ -52,6 +52,7 @@
                         <a href="cadastro.html" class="nav-link">
                             <button class="btn btn-white bg-warning" type="submit">
                                 <i class="fa-regular fa-user"></i>
+                                CONTA
                             </button>
                         </a>
                     </li>
@@ -61,7 +62,7 @@
                 <form class="form-inline">
                     <input class="form-control ml-lgl-5 mr-2" type="search" placeholder="Buscar...">
                     <button class="btn" type="submit">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-magnifying-glass" style="color: white;"></i>
                     </button>
                 </form>
 
@@ -142,7 +143,7 @@
 
         <div class="row">
             <div class="col-12 text-center my-3">
-                <h1 class="warning">NOTÍCIAS</h1>
+                <h3>ÚLTIMOS CADASTRADOS</h3>
             </div>
         </div>
 
@@ -158,7 +159,6 @@
                 </div>
                 <ul>
                     <li>Por: R$ 00,00</li>
-                    <li>Até: 00/00/0000</li>
                 </ul>
                 <div class="justify-content-end p-2">
                     <a class="card-link" href="#">
@@ -178,7 +178,6 @@
                 </div>
                 <ul>
                     <li>Por: R$ 00,00</li>
-                    <li>Até: 00/00/0000</li>
                 </ul>
                 <div class="justify-content-end p-2">
                     <a class="card-link" href="#">
@@ -198,7 +197,6 @@
                 </div>
                 <ul>
                     <li>Por: R$ 00,00</li>
-                    <li>Até: 00/00/0000</li>
                 </ul>
                 <div class="justify-content-end p-2">
                     <a class="card-link" href="#">
@@ -218,7 +216,6 @@
                 </div>
                 <ul>
                     <li>Por: R$ 00,00</li>
-                    <li>Até: 00/00/0000</li>
                 </ul>
                 <div class="justify-content-end p-2">
                     <a class="card-link" href="#">
@@ -231,79 +228,83 @@
     </div>
     </div>
 
-    <!-- Formulario
-    <div class="container">
+    <!-- Rodapé -->
+    <footer class="bg-info text-center text-white">
 
-        <div class="row">
-            <div class="col-12 text-center my-3">
-                <h1 class="display-4">Cadastrar Dados</h1>
-            </div>
-        </div>
-    </div>
-
-    <div class="row justify-content-center">
-        <div class="col-11">
-            <form>
-
-                <div class="form-row">
-                    <div class="form-group col-sm-6">
-                        <label for="inputName">Nome Completo</label>
-                        <input class="form-control" type="text" id="inputNomeCompleto" placeholder="ex. Breno Machado Soares dos Santos">
+        <!-- Newseller -->
+        <div class="container p-4">
+            <!-- Section: Form -->
+            <section class="">
+            <form action="">
+                <!--Grid row-->
+                <div class="row d-flex justify-content-center">
+                <!--Grid column-->
+                <div class="col-auto">
+                    <p class="pt-2">
+                    <strong>Escreva-se para o nosso newsletter</strong>
+                    </p>
                     </div>
-                    <div class="form-group col-sm-6">
-                        <label for="inputEmail"> E-Mail</label>
-                        <input class="form-control" type="text" id="inputEmail" placeholder="ex. Breno@exemplo.com">
+                    <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-5 col-12">
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                    <input type="email" id="form5Example27" class="form-control" />
+                    <label class="form-label" for="form5Example27">Endereço de email</label>
                     </div>
                 </div>
+                <!--Grid column-->
 
-                <div class="form-row">
-                    <div class="form-group col-sm-6">
-                        <label for="inputEndereco">Endereço</label>
-                        <input class="form-control" type="text" id="inputEndereco" placeholder="ex. Rua Maria Pereira de Souza, 626 - Perequê Mirim">
-                    </div>
-                    <div class="form-group col-sm-2">
-                        <label for="inputCep">CEP</label>
-                        <input class="form-control" type="text" id="inputCep" placeholder="ex. 19778-407">
-                    </div>
-                    <div class="form-group col-sm-3">
-                        <label for="inputCidade">Cidade</label>
-                        <input class="form-control" type="text" id="inputCidade" placeholder="ex. Caraguatatuba">
-                    </div>
-                    <div class="form-group col-sm-1">
-                        <label for="inputUF">UF</label>
-                        <select class="form-control" id="inputUF">
-                            <option>AC</option>
-                            <option>...</option>
-                            <option selected>SP</option>
-                            <option>...</option>
-                            <option>EX</option>
-                        </select>
-                    </div>
+                <!--Grid column-->
+                <div class="col-auto">
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-warning mb-4">
+                    Inscrever-se
+                    </button>
                 </div>
-
-                <div class="form-row">
-                    <div class="form-group col-12">
-                        <label for="inputExperiencia">Formação e Experiência</label>
-                        <textarea class="form-control" id="inputExperiencia" rows="7" placeholder="ex. Técnico em Informática para a Internet. Trabalhei com as linguagens..."></textarea>
-                    </div>
+                <!--Grid column-->
                 </div>
-
-                <div class="form-row">
-                    <div class="form-group col-6">
-                        <button class="btn btn-primary" type="submit">Registrar</button>
-                    </div>
-                    <div class="form-group col-6 d-flex justify-content-end">
-                        <div class="form-check-inline align-middle">
-                            <label class="form-check-label text-muted">
-                                <input class="form-check-input" type="checkbox"> Receber avisos por e-mail
-                            </label>
-                        </div>
-                    </div>
-                </div>
+                <!--Grid row-->
             </form>
+            </section>
+            <!-- Section: Form -->
         </div>
-    </div>
-    -->
+        <!-- Grid container -->
+
+        <!-- Redes Sociais -->
+        <div class="container pb-0">
+
+            <!-- Section: Social media -->
+            <section class="mb-4">
+
+
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                ><i class="fab fa-twitter"></i>
+            </a>
+
+
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+
+            <!-- Discord -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                <i class="fa-brands fa-discord"></i>
+            </a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        
+
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-white" href="#"> www.jogos.com </a>
+        </div>
+    </footer>
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
