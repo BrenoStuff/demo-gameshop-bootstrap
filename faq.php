@@ -51,6 +51,7 @@
                         <a href="cadastro.html" class="nav-link">
                             <button class="btn btn-white bg-warning" type="submit">
                                 <i class="fa-regular fa-user"></i>
+                                CONTA
                             </button>
                         </a>
                     </li>
@@ -115,7 +116,7 @@
 
         <!--Area com o conteudo "espiado"-->
         <div class="col-9">
-            <div class="scrollspyhome text-justify p-3 scroll" data-spy="scroll" data-target="#navbarScrollspy" data-offset="50">
+            <div class="scrollspyhome text-justify p-3 scroll" data-spy="scroll" data-target="#navbarScrollspy" data-offset="0">
                 
                 <h1 id="item1">Pergunta 1</h1>
                 <p>

@@ -12,20 +12,20 @@ if(!isset($_GET['id'])){
 } else {
 
     try{
-        $stmt = $conn->prepare("DELETE FROM produtos WHERE id = :id");
+        $stmt = $conn->prepare("DELETE FROM games WHERE id = :id");
         $stmt->bindParam(':id', $id);
         $stmt->execute();
         if($stmt->rowCount()){
-            $result['success']['message'] = 'Produto deletado com sucesso!';
-            echo json_encode($result);   
+            echo "Deleted product successfully.";
         } else{
-            $result['success']['message'] = 'ID do produto não encontrado.';
-            echo json_encode($result);
+            echo "Product not found.";
         }
     } catch(PDOException $e) {
         echo "Error deleting product: " . $e->getMessage();
     }
 
 }
+
+echo '<br> <a href="../">Home</a>';
 
 ?>

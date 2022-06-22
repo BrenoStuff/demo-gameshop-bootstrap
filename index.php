@@ -18,7 +18,7 @@
 
         <div class="container">
 
-            <a class="navbar-brand" href="index.html"><i class="fa-solid fa-house"></i></a>
+            <a class="navbar-brand" href="index.php"><i class="fa-solid fa-house"></i></a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
                 <span class="navbar-toggler-icon"></span>
@@ -28,10 +28,10 @@
 
                 <!--Itens do navbar-->
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a href="games.html" class="nav-link">Jogos</a></li>
-                    <li class="nav-item"><a href="sales.html" class="nav-link">Promoções</a></li>
-                    <li class="nav-item"><a href="events.html" class="nav-link">Eventos</a></li>
-                    <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="games.php" class="nav-link">Jogos</a></li>
+                    <li class="nav-item"><a href="sales.php" class="nav-link">Promoções</a></li>
+                    <li class="nav-item"><a href="events.php" class="nav-link">Eventos</a></li>
+                    <li class="nav-item"><a href="faq.php" class="nav-link">FAQ</a></li>
                 </ul>
 
                 <!--Dropdown-->
@@ -49,7 +49,7 @@
 
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="cadastro.html" class="nav-link">
+                        <a href="cadastro.php" class="nav-link">
                             <button class="btn btn-white bg-warning" type="submit">
                                 <i class="fa-regular fa-user"></i>
                                 CONTA
@@ -148,17 +148,39 @@
         </div>
 
         <!--Cards-->
-
         <div class="container">
+
+        <?php
+            require('back-end\helpers\db-connect.php');
+
+            try{
+
+                $stmt = $conn->prepare("SELECT * FROM games ORDER BY id LIMIT 0, 3");
+                $stmt->execute();
+
+                $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                //print_r($result);
+
+            } catch(PDOException $e) {
+
+                echo "Error in searching product on DataBase: " . $e->getMessage();
+
+            }
+        ?>
+
+        <?php foreach($result as $product){ ?>
+
+            <!-- Cards -->
             <div class="card">
-                <img class="card-img-top" src="img/relgio.jpg">
+                
+                <!-- Card do jogo -->
+                <img class="card-img-top" src="<?php echo $product['foto']; ?>">
                 <div class="card-body">
-                    <h6 class="card-title text-center"> JOGO 1</h6>
-                    <p class="card-text small text-justify"> Descrição do jogo 1.
-                    </p>
+                    <h6 class="card-title text-center"><?php echo $product['nome']; ?></h6>
+                    <p class="card-text small"><?php echo substr($product['descricao'], 0, 100); ?>...</p>
                 </div>
                 <ul>
-                    <li>Por: R$ 00,00</li>
+                    <li>Por: <?php echo $product['preco']; ?></li>
                 </ul>
                 <div class="justify-content-end p-2">
                     <a class="card-link" href="#">
@@ -166,66 +188,11 @@
                     </a>
                 </div>
             </div><br>
-        </div>
 
-        <div class="container">
-            <div class="card">
-                <img class="card-img-top" src="img/relgio.jpg">
-                <div class="card-body">
-                    <h6 class="card-title text-center"> JOGO 2</h6>
-                    <p class="card-text small text-justify"> Descrição do jogo 2.
-                    </p>
-                </div>
-                <ul>
-                    <li>Por: R$ 00,00</li>
-                </ul>
-                <div class="justify-content-end p-2">
-                    <a class="card-link" href="#">
-                    <button class="btn btn-white btn-warning">Detalhes...</button>
-                    </a>
-                </div>
-            </div><br>
-        </div>
+        <?php } ?>
 
-        <div class="container">
-            <div class="card">
-                <img class="card-img-top" src="img/relgio.jpg">
-                <div class="card-body">
-                    <h6 class="card-title text-center"> JOGO 3</h6>
-                    <p class="card-text small text-justify"> Descrição do jogo 3.
-                    </p>
-                </div>
-                <ul>
-                    <li>Por: R$ 00,00</li>
-                </ul>
-                <div class="justify-content-end p-2">
-                    <a class="card-link" href="#">
-                    <button class="btn btn-white btn-warning">Detalhes...</button>
-                    </a>
-                </div>
-            </div><br>
         </div>
-
-        <div class="container">
-            <div class="card">
-                <img class="card-img-top" src="img/relgio.jpg">
-                <div class="card-body">
-                    <h6 class="card-title text-center"> JOGO 4</h6>
-                    <p class="card-text small text-justify"> Descrição do jogo 4.
-                    </p>
-                </div>
-                <ul>
-                    <li>Por: R$ 00,00</li>
-                </ul>
-                <div class="justify-content-end p-2">
-                    <a class="card-link" href="#">
-                    <button class="btn btn-white btn-warning">Detalhes...</button>
-                    </a>
-                </div>
-            </div><br>
         </div>
-
-    </div>
     </div>
 
     <!-- Rodapé -->
