@@ -106,17 +106,17 @@
                 <!-- Ícone de editar/deletar -->
                 <div class="container d-flex">
 
-                    <a class="btn btn-dark" href="back-end/delete-product.php?id=<?php echo $product['id']; ?>">
+                    <a class="btn btn-dark" href="back-end/delete-game.php?id=<?php echo $product['id']; ?>">
                         <img src="img/icon-trash.svg" width="15px" height="15px">
                     </a>
 
                     <div type="button" data-toggle="modal" data-target="#openModalEditar" class="btn btn-dark" onclick="                 
-                    editProduct(
+                    editGame(
                     <?php echo $product['id']; ?>,
                     '<?php echo $product['nome']; ?>',
                     '<?php echo $product['desenvolvedora']; ?>',
-                    '<?php echo $product['foto']; ?>'
-                    '<?php echo $product['descricao']; ?>'
+                    '<?php echo $product['foto']; ?>',
+                    '<?php echo $product['descricao']; ?>',
                     '<?php echo $product['preco']; ?>'
                     )">
                         <img src="img/icon-edit.svg" width="15px" height="15px">
@@ -219,12 +219,9 @@
         </div>
     </div>
 
-    <div class="modal" id="modalEditGame" onclick="closeModal(event)">
-
-	</div>
-
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/myscripts.js"></script>
     
 </body>
 </html>
