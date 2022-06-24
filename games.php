@@ -93,31 +93,33 @@
 
             } catch(PDOException $e) {
 
-                echo "Error in searching product on DataBase: " . $e->getMessage();
+                echo "Error in searching game on DataBase: " . $e->getMessage();
 
             }
         ?>
 
-        <?php foreach($result as $product){ ?>
+        <?php foreach($result as $game){ ?>
 
             <!-- Cards -->
             <div class="card col-3">
 
                 <!-- Ícone de editar/deletar -->
-                <div class="container d-flex">
+                <div class="container d-flex p-2">
 
-                    <a class="btn btn-dark" href="back-end/delete-game.php?id=<?php echo $product['id']; ?>">
+                    <!-- DELETAR -->
+                    <a class="btn bg-danger btn-dark col-6" href="back-end/delete-game.php?id=<?php echo $game['id']; ?>">
                         <img src="img/icon-trash.svg" width="15px" height="15px">
                     </a>
 
-                    <div type="button" data-toggle="modal" data-target="#openModalEditar" class="btn btn-dark" onclick="                 
+                    <!-- EDITAR -->
+                    <div class="btn bg-primary btn-dark col-6" type="button" data-toggle="modal" data-target="#openModalEditar"  onclick="                 
                     editGame(
-                    <?php echo $product['id']; ?>,
-                    '<?php echo $product['nome']; ?>',
-                    '<?php echo $product['desenvolvedora']; ?>',
-                    '<?php echo $product['foto']; ?>',
-                    '<?php echo $product['descricao']; ?>',
-                    '<?php echo $product['preco']; ?>'
+                    <?php echo $game['id']; ?>,
+                    '<?php echo $game['nome']; ?>',
+                    '<?php echo $game['desenvolvedora']; ?>',
+                    '<?php echo $game['foto']; ?>',
+                    '<?php echo $game['descricao']; ?>',
+                    '<?php echo $game['preco']; ?>'
                     )">
                         <img src="img/icon-edit.svg" width="15px" height="15px">
                     </div>
@@ -125,17 +127,17 @@
                 </div>
 
                 <!-- Card do jogo -->
-                <img class="card-img-top" src="<?php echo $product['foto']; ?>">
+                <img class="card-img-top" src="<?php echo $game['foto']; ?>">
                 <div class="card-body">
-                    <h6 class="card-title text-center"><?php echo $product['nome']; ?></h6>
-                    <p class="card-text small"><?php echo substr($product['descricao'], 0, 100); ?>...</p>
+                    <h6 class="card-title text-center"><?php echo $game['nome']; ?></h6>
+                    <p class="card-text small"><?php echo substr($game['descricao'], 0, 100); ?>...</p>
                 </div>
                 <ul>
-                    <li>Por: <?php echo $product['preco']; ?></li>
+                    <li>Por: <?php echo $game['preco']; ?></li>
                 </ul>
                 <div class="justify-content-end p-2">
-                    <a class="card-link" href="#">
-                    <button class="btn btn-white btn-warning">Detalhes...</button>
+                    <a class="card-link btn btn-white btn-warning" href="listagem.php?id=<?php echo $game['id']; ?>">
+                        Detalhes...
                     </a>
                 </div>
             </div>
@@ -145,6 +147,8 @@
     </div>
     </section>
     
+
+    <!-- MODAL DE ADICIONAR O JOGO -->
     <div class="modal fade" id="openModalAdicionar" tabindex="-1" role="dialog" aria-labelledby="openModalAdicionar" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -157,20 +161,32 @@
                 <div class="modal-body">
                     <main>
                         <form method="POST" action="back-end\insert-game.php">
-                            <label>Nome do Jogo:</label><br>
-                            <input class="full" type="text" placeholder="Nome do Jogo..." name="nome"/><br>
 
-                            <label>Desenvolvedora:</label><br>
-                            <input class="full" type="text" placeholder="Desenvolvedora do jogo..." name="desenvolvedora"/><br>
+                            <div class="form-group" style="display: unset;">
+                                <label>Nome do Jogo:</label><br>
+                                <input class="form-control" type="text" placeholder="Nome do Jogo..." name="nome"/><br>
+                            </div>
 
-                            <label>Foto (url):</label><br>
-                            <input class="full" type="text" placeholder="Foto em Url..." name="foto"/><br>
+                            <div class="form-group" style="display: unset;">
+                                <label>Desenvolvedora:</label><br>
+                                <input class="form-control" type="text" placeholder="Desenvolvedora do jogo..." name="desenvolvedora"/><br>
+                            </div>
 
-                            <label>Descrição:</label><br>
-                            <input class="full" type="text" placeholder="Descrição do Jogo..." name="descricao"/><br>
+                            <div class="form-group" style="display: unset;">
+                                <label>Foto (url):</label><br>
+                                <input class="form-control" type="text" placeholder="Foto em URL..." name="foto"/><br>
+                            </div>
 
-                            <label>Preço: </label><br>
-                            <input type="text" placeholder="R$ 99,99..." name="preco"/><br>
+                            <div class="form-group" style="display: unset;">
+                                <label>Descrição:</label><br>
+                                <input class="form-control" type="text" placeholder="Descrição do Jogo..." name="descricao"/><br>
+                            </div>
+
+
+                            <div class="form-group" style="display: unset;">
+                                <label>Preço: </label><br>
+                                <input class="form-control" type="text" placeholder="R$ 99,99..." name="preco"/><br>
+                            </div>
 
                             <input type="submit" class="btn btn-primary" value="Adicionar Produto" />
                         </form>
@@ -179,7 +195,8 @@
             </div>
         </div>
     </div>
-
+    
+    <!-- MODAL DE EDITAR O JOGO -->
     <div class="modal fade" id="openModalEditar" tabindex="-1" role="dialog" aria-labelledby="openModalEditar" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -195,22 +212,32 @@
                         <form method="POST" action="back-end/edit-game.php">
                             <input type="hidden" name="id" value=""/>
 
-                            <label>Nome do Jogo:</label><br>
-                            <input class="full" type="text" placeholder="Nome do jogo..." name="nome" /><br>
+                            <div class="form-group" style="display: unset;">
+                                <label for="nomeGame">Nome do Jogo:</label><br>
+                                <input class="form-control" id=nomeGame type="text" placeholder="Nome do jogo..." name="nome" /><br>
+                            </div>
 
-                            <label>Desenvolvedora:</label><br>
-                            <input class="full" type="text" placeholder="URL da foto..." name="desenvolvedora" /><br>
-
-                            <label>Foto (url):</label><br>
-                            <input class="full" type="text" placeholder="Título do Produto..." name="foto" /><br>
+                            <div class="form-group" style="display: unset;">
+                                <label>Desenvolvedora:</label><br>
+                                <input class="form-control" type="text" placeholder="Desenvolvedora do jogo..." name="desenvolvedora" /><br>
+                            </div>
                             
-                            <label>Descrição:</label><br>
-                            <input type="text" placeholder="R$ 99,00..." name="descricao" /><br>
-
-                            <label>Preço:</label><br>
-                            <input type="text" placeholder="R$ 99,00..." name="preco" /><br>
+                            <div class="form-group" style="display: unset;">
+                                <label>Foto (url):</label><br>
+                                <input class="form-control" type="text" placeholder="Foto em URL..." name="foto" /><br>
+                            </div>
                             
-                            <input type="submit" value="Editar Produto" />
+                            <div class="form-group" style="display: unset;">
+                                <label>Descrição:</label><br>
+                                <input class="form-control" type="text" placeholder="Descrição do Jogo..." name="descricao" /><br>
+                            </div>
+
+                            <div class="form-group" style="display: unset;">
+                                <label>Preço:</label><br>
+                                <input class="form-control" type="text" placeholder="R$ 99,00..." name="preco" /><br>
+                            </div>
+                            
+                            <input class="btn bg-primary btn-dark" type="submit" value="Editar Jogo" />
                         </form>
                     </main>
                 </div>

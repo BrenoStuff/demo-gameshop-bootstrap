@@ -17,7 +17,7 @@
 
         <div class="container">
 
-            <a class="navbar-brand" href="index.html"><i class="fa-solid fa-house"></i></a>
+            <a class="navbar-brand" href="index.php"><i class="fa-solid fa-house"></i></a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
                 <span class="navbar-toggler-icon"></span>
@@ -27,10 +27,10 @@
 
                 <!--Itens do navbar-->
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a href="games.html" class="nav-link">Jogos</a></li>
-                    <li class="nav-item"><a href="sales.html" class="nav-link">Promoções</a></li>
-                    <li class="nav-item"><a href="events.html" class="nav-link">Eventos</a></li>
-                    <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="games.php" class="nav-link">Jogos</a></li>
+                    <li class="nav-item"><a href="sales.php" class="nav-link">Promoções</a></li>
+                    <li class="nav-item"><a href="events.php" class="nav-link">Eventos</a></li>
+                    <li class="nav-item"><a href="faq.php" class="nav-link">FAQ</a></li>
                 </ul>
 
                 <!--Dropdown-->
@@ -48,7 +48,7 @@
 
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="cadastro.html" class="nav-link">
+                        <a href="cadastro.php" class="nav-link">
                             <button class="btn btn-white bg-warning" type="submit">
                                 <i class="fa-regular fa-user"></i>
                                 CONTA
@@ -168,6 +168,7 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/myscripts.js"></script>
 
 
 </body>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogos - PROMOÇÕES</title>
+    <title>Jogos - HOME</title>
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="fontawesome/css/all.css">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -12,8 +13,8 @@
 </head>
 <body>
 
-     <!--Navbar do site-->
-     <nav class="navbar navbar-expand-lg navbar-dark bg-info" >
+    <!--Navbar do site-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info" >
 
         <div class="container">
 
@@ -51,6 +52,7 @@
                         <a href="cadastro.php" class="nav-link">
                             <button class="btn btn-white bg-warning" type="submit">
                                 <i class="fa-regular fa-user"></i>
+                                CONTA
                             </button>
                         </a>
                     </li>
@@ -67,15 +69,52 @@
             </div>
         </div>
     </nav>
+
+    <?php
+
+        require('back-end\helpers\db-connect.php');
+
+        $id = $_GET['id'];
+
+        try{
+
+            $stmt = $conn->prepare("SELECT * FROM games WHERE id = $id");
+            $stmt->execute();
+
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $dados = $result[0];
+            // print_r($dados);
+
+        } catch(PDOException $e) {
+
+            echo "Error in searching game on DataBase: " . $e->getMessage();
+
+        }
+
+    ?>
+
+    <!-- BreadCrump -->
+    <nav aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                <li class="breadcrumb-item"><a href="games.php">Jogos</a></li>
+                <li class="breadcrumb-item active" aria-current="page"> <?php echo $dados['nome'] ?></li>
+            </ol>
+        </div>
+    </nav>
     
-    <div class="container text-center">
-        <h1 class="display-1"> ERROR 404 </h6>
-        <small>Page not found.</small>
+    <!-- LISTAGEM DOS JOGOS -->
+    <div class="container">
+    <h1> BEM VINDO AO SITE</h1>
+
+    <h3> Nome do jogo: <?php echo $dados['nome']?> </h3>
+
     </div>
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/myscripts.js"></script>
-    
+
 </body>
 </html>
