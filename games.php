@@ -78,7 +78,7 @@
     </header>
 
     <section class="container">
-    <div class="row">
+    <div class="row" style="padding-bottom: 50px;">
 
         <?php
             require('back-end\helpers\db-connect.php');
@@ -245,6 +245,84 @@
             </div>
         </div>
     </div>
+
+    <!-- Rodapé -->
+    <footer class="bg-info text-center text-white">
+
+        <!-- Newseller -->
+        <div class="container p-4">
+            <!-- Section: Form -->
+            <section class="">
+            <form action="">
+                <!--Grid row-->
+                <div class="row d-flex justify-content-center">
+                <!--Grid column-->
+                <div class="col-auto">
+                    <p class="pt-2">
+                    <strong>Escreva-se para o nosso newsletter</strong>
+                    </p>
+                    </div>
+                    <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-5 col-12">
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                    <input type="email" id="form5Example27" class="form-control" />
+                    <label class="form-label" for="form5Example27">Endereço de email</label>
+                    </div>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-auto">
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-warning mb-4">
+                    Inscrever-se
+                    </button>
+                </div>
+                <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </form>
+            </section>
+            <!-- Section: Form -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Redes Sociais -->
+        <div class="container pb-0">
+
+            <!-- Section: Social media -->
+            <section class="mb-4">
+
+
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                ><i class="fab fa-twitter"></i>
+            </a>
+
+
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+
+            <!-- Discord -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                <i class="fa-brands fa-discord"></i>
+            </a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        
+
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-white" href="#"> www.jogos.com </a>
+        </div>
+    </footer>
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>

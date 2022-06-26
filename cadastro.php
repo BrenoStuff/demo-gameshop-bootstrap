@@ -7,6 +7,7 @@
     <title>Jogos - CADASTRO</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
 </head>
 <body>
 
@@ -25,44 +26,45 @@
 
             <!--Itens do navbar-->
             <ul class="navbar-nav">
-                <li class="nav-item"><a href="games.php" class="nav-link">Jogos</a></li>
-                <li class="nav-item"><a href="sales.php" class="nav-link">Promoções</a></li>
-                <li class="nav-item"><a href="events.php" class="nav-link">Eventos</a></li>
-                <li class="nav-item"><a href="faq.php" class="nav-link">FAQ</a></li>
-            </ul>
+                    <li class="nav-item"><a href="games.php" class="nav-link">Jogos</a></li>
+                    <li class="nav-item"><a href="sales.php" class="nav-link">Promoções</a></li>
+                    <li class="nav-item"><a href="events.php" class="nav-link">Eventos</a></li>
+                    <li class="nav-item"><a href="faq.php" class="nav-link">FAQ</a></li>
+                </ul>
 
-            <!--Dropdown-->
-            <ul class="navbar-nav ml-auto mr-3">
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="navDrop">
-                        Social...
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item">Discord</a>
-                        <a href="#" class="dropdown-item">Twiter</a>
-                    </div>
-                </li>
-            </ul>
+                <!--Dropdown-->
+                <ul class="navbar-nav ml-auto mr-3">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="navDrop">
+                            Social...
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Discord</a>
+                            <a href="#" class="dropdown-item">Twiter</a>
+                        </div>
+                    </li>
+                </ul>
 
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a href="cadastro.php" class="nav-link">
-                        <button class="btn btn-white bg-warning" type="submit">
-                            <i class="fa-regular fa-user"></i>
-                        </button>
-                    </a>
-                </li>
-            </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="cadastro.php" class="nav-link">
+                            <button class="btn btn-white bg-warning" type="submit">
+                                <i class="fa-regular fa-user"></i>
+                                CONTA
+                            </button>
+                        </a>
+                    </li>
+                </ul>
 
-            <!--Formulario de pesquisa-->
-            <form class="form-inline">
-                <input class="form-control ml-lgl-5 mr-2" type="search" placeholder="Buscar...">
-                <button class="btn" type="submit">
-                    <i class="fa-solid fa-magnifying-glass" style="color: white;"></i>
-                    CONTA
-                </button>
-            </form>
+                <!--Formulario de pesquisa-->
+                <form class="form-inline">
+                    <input class="form-control ml-lgl-5 mr-2" type="search" placeholder="Buscar...">
+                    <button class="btn" type="submit">
+                        <i class="fa-solid fa-magnifying-glass" style="color: white;"></i>
+                    </button>
+                </form>
 
+            </div>
         </div>
     </nav>
     
@@ -151,7 +153,7 @@
 
             <div class="row">
                 <div class="col-12 text-center my-3">
-                    <h1 class="display-4">Fazer login</h1>
+                    <h1 class="display-4">Entrar</h1>
                 </div>
             </div>
         </div>
