@@ -41,8 +41,9 @@
                             Social...
                         </a>
                         <div class="dropdown-menu">
-                            <a href="#" class="dropdown-item">Discord</a>
-                            <a href="#" class="dropdown-item">Twiter</a>
+                            <a href="https://discord.com/" target="_blank" class="dropdown-item">Discord</a>
+                            <a href="https://www.instagram.com/" target="_blank" class="dropdown-item">Instagram</a>
+                            <a href="https://twitter.com/" target="_blank" class="dropdown-item">Twiter</a>
                         </div>
                     </li>
                 </ul>
@@ -70,129 +71,150 @@
         </div>
     </nav>
 
-
-
-    <!-- Primeira div (esquerda)-->
+    <!-- row das colunas -->
     <div class="row">
-    <div class="col-lg-9">
 
-        <div class="carousel slide" id="carouselHome" data-ride="carousel">
-            <!--bloco que irá sustentar as imagens e textos-->
-            <div class="carousel-inner">
-    
-                <div class="carousel-item active">
-                    <img src="img/trilha-sonora.jpg" class="img-fluid d-block">
+        <!-- Primeira div (esquerda)-->
+        <div class="col-lg-9">
+
+            <div class="carousel slide" id="carouselHome" data-ride="carousel">
+                <!--bloco que irá sustentar as imagens e textos-->
+                <div class="carousel-inner">
+        
+                    <div class="carousel-item active">
+                        <img src="img/trilha-sonora.jpg" class="img-fluid d-block">
+                        <div class="carousel-caption">
+                            <h3>Titulo 1</h3>
+                            <p class="d-none d-sm-block"> Descrição 1</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <img src="img/assassins creed.webp" class="img-fluid d-block">
                     <div class="carousel-caption">
-                        <h3> Jogo 1</h3>
-                        <p class="d-none d-sm-block"> Descrição 1</p>
+                        <h3>Titulo 2</h3>
+                        <p class="d-none d-sm-block">Descrição 2</p>
+                    </div>
+                    </div>
+        
+                    <div class="carousel-item">
+                        <img src="img/valorant.jpg" class="img-fluid d-block">
+                        <div class="carousel-caption">
+                            <h3>Titulo 3</h3>
+                            <p class="d-nome d-sm-block">Descrição 3</p>
+        
+                        </div>
                     </div>
                 </div>
-                
-                <div class="carousel-item">
-                    <img src="img/assassins creed.webp" class="img-fluid d-block">
-                   <div class="carousel-caption">
-                    <h3>Jogo 2</h3>
-                    <p class="d-none d-sm-block">Descrição 2</p>
-                   </div>
-                </div>
-    
-                <div class="carousel-item">
-                    <img src="img/valorant.jpg" class="img-fluid d-block">
-                    <div class="carousel-caption">
-                        <h3>Jogo 3</h3>
-                        <p class="d-nome d-sm-block">Descrição 3</p>
-    
-                    </div>
+
+                <!--link com os controles dos slides-->
+                <a class="carousel-control-prev" href="#carouselHome" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+        
+        
+                <a class="carousel-control-next" href="#carouselHome" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="sr-only">Próximo</span>
+                </a>
+        
+                <!--listas com os indicadores do slide corrente-->
+                <ol class="carousel-indicators">
+                    <li class="active" data-target="#carouselHome" data-slide-to="0"></li>
+                    <li data-target="#carouselHome" data-slide-to="1"></li>
+                    <li data-target="#carouselHome" data-slide-to="2"></li>
+                </ol>
+            </div>
+
+            <div class="row">
+                <div class="col-12 text-center my-5">
+                    <p>
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                    </p>
                 </div>
             </div>
 
-            <!--link com os controles dos slides-->
-            <a class="carousel-control-prev" href="#carouselHome" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-                <span class="sr-only">Anterior</span>
-            </a>
-        
-        
-            <a class="carousel-control-next" href="#carouselHome" role="button" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-                <span class="sr-only">Próximo</span>
-            </a>
-        
-            <!--listas com os indicadores do slide corrente-->
-            <ol class="carousel-indicators">
-                <li class="active" data-target="#carouselHome" data-slide-to="0"></li>
-                <li data-target="#carouselHome" data-slide-to="1"></li>
-                <li data-target="#carouselHome" data-slide-to="2"></li>
-            </ol>
-        </div>
+            <!-- Jumbotron -->
+            <div class="jumbotron">
+                <h1 class="display-4">Quem nós somos?</h1>
 
-        <div class="row">
-            <div class="col-12 text-center my-5">
-                <p>
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                <div class="row">
+                    <div class="col-6">
+                    <p class="lead">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/UPYYHTjw-fY"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-4">
+                <p class="lead">
+                    <a class="btn btn-warning btn-lg" href="faq.php" role="button">FAQ</a>
                 </p>
             </div>
+
         </div>
-
-    </div>
     
+        <!-- COLUNA DIREITA-->
+        <div class="col-lg-3 d-none d-lg-block">
 
+            <div class="row">
+                <div class="col-12 text-center my-3">
+                    <h3>ÚLTIMOS CADASTRADOS</h3>
+                </div>
+            </div>
 
-    <!-- COLUNA DIREITA-->
-    <div class="col-lg-3 d-none d-lg-block">
+            <!--Cards-->
+            <div class="container">
 
-        <div class="row">
-            <div class="col-12 text-center my-3">
-                <h3>ÚLTIMOS CADASTRADOS</h3>
+                <?php
+                    require('back-end\helpers\db-connect.php');
+
+                    try{
+
+                        $stmt = $conn->prepare("SELECT * FROM games ORDER BY id DESC LIMIT 0, 3");
+                        $stmt->execute();
+
+                        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                        //print_r($result);
+
+                    } catch(PDOException $e) {
+
+                        echo "Error in searching product on DataBase: " . $e->getMessage();
+
+                    }
+                ?>
+
+                <?php foreach($result as $game){ ?>
+
+                    <!-- Cards -->
+                    <div class="card">
+                        
+                        <!-- Card do jogo -->
+                        <img class="card-img-top" src="<?php echo $game['foto']; ?>">
+                        <div class="card-body">
+                            <h6 class="card-title text-center"><?php echo $game['nome']; ?></h6>
+                            <p class="card-text small"><?php echo substr($game['descricao'], 0, 100); ?>...</p>
+                        </div>
+                        <ul>
+                            <li>Por: <?php echo $game['preco']; ?></li>
+                        </ul>
+                        <div class="justify-content-end p-2">
+                            <a class="card-link btn btn-white btn-warning" href="listagem.php?id=<?php echo $game['id']; ?>">
+                                Detalhes...
+                            </a>
+                        </div>
+                    </div><br>
+
+                <?php } ?>
+
             </div>
         </div>
 
-        <!--Cards-->
-        <div class="container">
-
-        <?php
-            require('back-end\helpers\db-connect.php');
-
-            try{
-
-                $stmt = $conn->prepare("SELECT * FROM games ORDER BY id LIMIT 0, 3");
-                $stmt->execute();
-
-                $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                //print_r($result);
-
-            } catch(PDOException $e) {
-
-                echo "Error in searching product on DataBase: " . $e->getMessage();
-
-            }
-        ?>
-
-        <?php foreach($result as $product){ ?>
-
-            <!-- Cards -->
-            <div class="card">
-                
-                <!-- Card do jogo -->
-                <img class="card-img-top" src="<?php echo $product['foto']; ?>">
-                <div class="card-body">
-                    <h6 class="card-title text-center"><?php echo $product['nome']; ?></h6>
-                    <p class="card-text small"><?php echo substr($product['descricao'], 0, 100); ?>...</p>
-                </div>
-                <ul>
-                    <li>Por: <?php echo $product['preco']; ?></li>
-                </ul>
-                <div class="justify-content-end p-2">
-                    <a class="card-link" href="#">
-                    <button class="btn btn-white btn-warning">Detalhes...</button>
-                    </a>
-                </div>
-            </div><br>
-
-        <?php } ?>
-
-        </div>
-        </div>
     </div>
 
     <!-- Rodapé -->
@@ -200,18 +222,16 @@
 
         <!-- Newseller -->
         <div class="container p-4">
-            <!-- Section: Form -->
-            <section class="">
-            <form action="">
-                <!--Grid row-->
-                <div class="row d-flex justify-content-center">
+
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center">
+
                 <!--Grid column-->
                 <div class="col-auto">
                     <p class="pt-2">
-                    <strong>Escreva-se para o nosso newsletter</strong>
+                    <strong>Inscreva-se para o nosso newsletter</strong>
                     </p>
-                    </div>
-                    <!--Grid column-->
+                </div>
 
                 <!--Grid column-->
                 <div class="col-md-5 col-12">
@@ -221,7 +241,6 @@
                     <label class="form-label" for="form5Example27">Endereço de email</label>
                     </div>
                 </div>
-                <!--Grid column-->
 
                 <!--Grid column-->
                 <div class="col-auto">
@@ -230,47 +249,36 @@
                     Inscrever-se
                     </button>
                 </div>
-                <!--Grid column-->
-                </div>
-                <!--Grid row-->
-            </form>
-            </section>
-            <!-- Section: Form -->
+
+            </div>
+
         </div>
-        <!-- Grid container -->
 
         <!-- Redes Sociais -->
-        <div class="container pb-0">
-
-            <!-- Section: Social media -->
-            <section class="mb-4">
-
+        <section class="mb-4">
 
             <!-- Twitter -->
             <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
                 ><i class="fab fa-twitter"></i>
             </a>
 
-
             <!-- Instagram -->
             <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
                 <i class="fab fa-instagram"></i>
             </a>
 
-
             <!-- Discord -->
             <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
                 <i class="fa-brands fa-discord"></i>
             </a>
-            </section>
-            <!-- Section: Social media -->
-        </div>
-        
 
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        </section>
+
+        <div class="text-center p-3" style="display: block; background-color: rgba(0, 0, 0, 0.2);">
             © 2020 Copyright:
             <a class="text-white" href="#"> www.jogos.com </a>
         </div>
+
     </footer>
 
     <script src="js/jquery.js"></script>

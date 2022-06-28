@@ -16,16 +16,17 @@ if(!isset($_GET['id'])){
         $stmt->bindParam(':id', $id);
         $stmt->execute();
         if($stmt->rowCount()){
-            echo "Deleted product successfully.";
+            echo "Deleted game successfully.";
         } else{
-            echo "Product not found.";
+            echo "Game not found.";
         }
     } catch(PDOException $e) {
-        echo "Error deleting product: " . $e->getMessage();
+        echo "Error deleting game: " . $e->getMessage();
     }
 
 }
 
-echo '<br> <a href="../">Home</a>';
+header("location:../games.php"); 
+
 
 ?>

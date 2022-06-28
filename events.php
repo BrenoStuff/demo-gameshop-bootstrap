@@ -40,8 +40,9 @@
                             Social...
                         </a>
                         <div class="dropdown-menu">
-                            <a href="#" class="dropdown-item">Discord</a>
-                            <a href="#" class="dropdown-item">Twiter</a>
+                            <a href="https://discord.com/" target="_blank" class="dropdown-item">Discord</a>
+                            <a href="https://www.instagram.com/" target="_blank" class="dropdown-item">Instagram</a>
+                            <a href="https://twitter.com/" target="_blank" class="dropdown-item">Twiter</a>
                         </div>
                     </li>
                 </ul>

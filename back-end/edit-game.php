@@ -20,9 +20,9 @@ $stmt->bindParam(':preco', $preco);
 $stmt->execute();
 echo "Propriedades do Jogo editado com sucesso.";
 } catch(PDOException $e) {
-    echo "Houve um erro ao editar o produto selecionado: " . $e->getMessage();
+    echo "Houve um erro ao editar o jogo selecionado: " . $e->getMessage();
 }
 
-echo '<br> <a href="../">Home</a>';
+header("location:../games.php"); 
 
 ?>

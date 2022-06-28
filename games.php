@@ -40,8 +40,9 @@
                             Social...
                         </a>
                         <div class="dropdown-menu">
-                            <a href="#" class="dropdown-item">Discord</a>
-                            <a href="#" class="dropdown-item">Twiter</a>
+                            <a href="https://discord.com/" target="_blank" class="dropdown-item">Discord</a>
+                            <a href="https://www.instagram.com/" target="_blank" class="dropdown-item">Instagram</a>
+                            <a href="https://twitter.com/" target="_blank" class="dropdown-item">Twiter</a>
                         </div>
                     </li>
                 </ul>
@@ -101,7 +102,7 @@
         <?php foreach($result as $game){ ?>
 
             <!-- Cards -->
-            <div class="card col-3">
+            <div class="card col-3" style="padding-bottom: 20px;">
 
                 <!-- Ícone de editar/deletar -->
                 <div class="container d-flex p-2">
@@ -188,7 +189,7 @@
                                 <input class="form-control" type="text" placeholder="R$ 99,99..." name="preco"/><br>
                             </div>
 
-                            <input type="submit" class="btn btn-primary" value="Adicionar Produto" />
+                            <input type="submit" class="btn btn-primary" value="Inserir Jogo" />
                         </form>
                     </main>
                 </div>
@@ -259,7 +260,7 @@
                 <!--Grid column-->
                 <div class="col-auto">
                     <p class="pt-2">
-                    <strong>Escreva-se para o nosso newsletter</strong>
+                    <strong>Inscreva-se para o nosso newsletter</strong>
                     </p>
                     </div>
                     <!--Grid column-->

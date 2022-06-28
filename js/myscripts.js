@@ -1,7 +1,7 @@
 
 function editGame(id, nome, desenvolvedora, foto, descricao, preco){
     const inputId = document.querySelector('#openModalEditar input[name=id]')
-    console.log(inputId)
+    //console.log(inputId)
     const inputNome = document.querySelector('#openModalEditar input[name=nome]')
     const inputDesenvolvedora = document.querySelector('#openModalEditar input[name=desenvolvedora]')
     const inputFoto = document.querySelector('#openModalEditar input[name=foto]')

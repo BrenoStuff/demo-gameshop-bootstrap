@@ -29,6 +29,6 @@ try{
     echo "Houve algum erro para adicionar o jogo: " . $e->getMessage();
 }
 
-echo '<br> <a href="../">Home</a>';
+header("location:../games.php"); 
 
 ?>

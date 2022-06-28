@@ -39,8 +39,9 @@
                             Social...
                         </a>
                         <div class="dropdown-menu">
-                            <a href="#" class="dropdown-item">Discord</a>
-                            <a href="#" class="dropdown-item">Twiter</a>
+                            <a href="https://discord.com/" target="_blank" class="dropdown-item">Discord</a>
+                            <a href="https://www.instagram.com/" target="_blank" class="dropdown-item">Instagram</a>
+                            <a href="https://twitter.com/" target="_blank" class="dropdown-item">Twiter</a>
                         </div>
                     </li>
                 </ul>
@@ -70,126 +71,163 @@
     
     <div class="row">
 
-    <!-- COL ESQUERDA -->
-    <div class="col-6">
+        <!-- COL ESQUERDA -->
+        <div class="col-6">
 
-        <div class="container">
+            <div class="container">
 
-            <div class="row">
-                <div class="col-12 text-center my-3">
-                    <h1 class="display-4">Cadastrar</h1>
+                <div class="row">
+                    <div class="col-12 text-center my-3">
+                        <h1 class="display-4">Cadastrar</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-11">
+                    <form>
+
+                        <div class="form-row">
+                            <div class="form-group col-sm-6">
+                                <label for="inputNomeCompleto">Nome</label>
+                                <input class="form-control" type="text" id="inputNomeCompleto" placeholder="ex. Breno Machado Soares dos Santos">
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label for="inputEmail"> E-Mail</label>
+                                <input class="form-control" type="text" id="inputEmail" placeholder="ex. Breno@exemplo.com">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                                <label for="inputSenha">Senha:</label>
+                                <input class="form-control" type="text" id="inputSenha" placeholder="Batatinha">
+                        </div><br>
+
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <button class="btn btn-warning" type="submit">Registrar</button>
+                            </div>
+                            <div class="form-group col-6 d-flex justify-content-end">
+                                <div class="form-check-inline">
+                                    <label class="form-check-label text-muted">
+                                        <input class="form-check-input" type="checkbox"> Receber avisos por e-mail
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
 
-        <div class="row justify-content-center">
-            <div class="col-11">
-                <form>
+        <!-- COL DIREITA -->
+        <div class="col-6">
 
-                    <div class="form-row">
-                        <div class="form-group col-sm-6">
-                            <label for="inputNomeCompleto">Nome Completo</label>
-                            <input class="form-control" type="text" id="inputNomeCompleto" placeholder="ex. Breno Machado Soares dos Santos">
-                        </div>
-                        <div class="form-group col-sm-6">
-                            <label for="inputEmail"> E-Mail</label>
-                            <input class="form-control" type="text" id="inputEmail" placeholder="ex. Breno@exemplo.com">
-                        </div>
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-12 text-center my-3">
+                        <h1 class="display-4">Entrar</h1>
                     </div>
+                </div>
+            </div>
 
-                    <div class="form-row">
-                        <div class="form-group col-sm-6">
-                            <label for="inputEndereco">Endereço</label>
-                            <input class="form-control" type="text" id="inputEndereco" placeholder="ex. Rua Maria Pereira de Souza, 626 - Perequê Mirim">
-                        </div>
-                        <div class="form-group col-sm-2">
-                            <label for="inputCep">CEP</label>
-                            <input class="form-control" type="text" id="inputCep" placeholder="ex. 19778-407">
-                        </div>
-                        <div class="form-group col-sm-3">
-                            <label for="inputCidade">Cidade</label>
-                            <input class="form-control" type="text" id="inputCidade" placeholder="ex. Caraguatatuba">
-                        </div>
-                        <div class="form-group col-sm-1">
-                            <label for="inputUF">UF</label>
-                            <select class="form-control" id="inputUF">
-                                <option>AC</option>
-                                <option>...</option>
-                                <option selected>SP</option>
-                                <option>...</option>
-                                <option>EX</option>
-                            </select>
-                        </div>
-                    </div>
+            <div class="row justify-content-center">
+                <div class="col-11">
+                    <form>
 
-                    <div class="form-row">
-                        <div class="form-group col-12">
-                            <label for="inputExperiencia">Formação e Experiência</label>
-                            <textarea class="form-control" id="inputExperiencia" rows="7" placeholder="ex. Técnico em Informática para a Internet. Trabalhei com as linguagens..."></textarea>
-                        </div>
-                    </div>
+                        <div class="form-row">
+                                <label for="inputEmail">Email:</label>
+                                <input class="form-control" type="text" id="inputEmail" placeholder="Breno@exem.com">
+                        </div><br>
 
-                    <div class="form-row">
-                        <div class="form-group col-6">
-                            <button class="btn btn-primary" type="submit">Registrar</button>
-                        </div>
-                        <div class="form-group col-6 d-flex justify-content-end">
-                            <div class="form-check-inline">
-                                <label class="form-check-label text-muted">
-                                    <input class="form-check-input" type="checkbox"> Receber avisos por e-mail
-                                </label>
+                        <div class="form-row">
+                                <label for="inputSenha">Senha:</label>
+                                <input class="form-control" type="text" id="inputSenha" placeholder="Batatinha">
+                        </div><br>
+
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <button class="btn btn-warning" type="submit">Entrar</button>
+                            </div>
+                            <div class="form-group col-6 d-flex justify-content-end">
+                                <div class="form-check-inline">
+                                    <label class="form-check-label text-muted">
+                                        <input class="form-check-input" type="checkbox"> Deixar sua conta logada
+                                    </label>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- COL DIREITA -->
-    <div class="col-6">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-12 text-center my-3">
-                    <h1 class="display-4">Entrar</h1>
+                    </form>
                 </div>
             </div>
         </div>
 
-        <div class="row justify-content-center">
-            <div class="col-11">
-                <form>
+    </div>
 
-                    <div class="form-row">
-                            <label for="inputEmail">Email:</label>
-                            <input class="form-control" type="text" id="inputEmail" placeholder="Breno@exem.com">
-                    </div><br>
+    <!-- Rodapé -->
+    <footer class="bg-info text-center text-white">
 
-                    <div class="form-row">
-                            <label for="inputSenha">Senha:</label>
-                            <input class="form-control" type="text" id="inputSenha" placeholder="Batatinha">
-                    </div><br>
+        <!-- Newseller -->
+        <div class="container p-4">
 
-                    <div class="form-row">
-                        <div class="form-group col-6">
-                            <button class="btn btn-warning" type="submit">Logar</button>
-                        </div>
-                        <div class="form-group col-6 d-flex justify-content-end">
-                            <div class="form-check-inline">
-                                <label class="form-check-label text-muted">
-                                    <input class="form-check-input" type="checkbox"> Deixar sua conta logada
-                                </label>
-                            </div>
-                        </div>
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center">
+
+                <!--Grid column-->
+                <div class="col-auto">
+                    <p class="pt-2">
+                    <strong>Inscreva-se para o nosso newsletter</strong>
+                    </p>
+                </div>
+
+                <!--Grid column-->
+                <div class="col-md-5 col-12">
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                    <input type="email" id="form5Example27" class="form-control" />
+                    <label class="form-label" for="form5Example27">Endereço de email</label>
                     </div>
-                </form>
-            </div>
-        </div>
-    </div>
+                </div>
 
-    </div>
+                <!--Grid column-->
+                <div class="col-auto">
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-warning mb-4">
+                    Inscrever-se
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Redes Sociais -->
+        <section class="mb-4">
+
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                ><i class="fab fa-twitter"></i>
+            </a>
+
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <!-- Discord -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                <i class="fa-brands fa-discord"></i>
+            </a>
+
+        </section>
+
+        <div class="text-center p-3" style="display: block; background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-white" href="#"> www.jogos.com </a>
+        </div>
+
+    </footer>
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
